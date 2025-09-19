@@ -19,7 +19,7 @@ This is the main task that brings everything together. It starts by calling the 
 
 ## Software Design Principles Used in the Code
 
-This are Software Design Principles used in every Task:
+This are Software Design Principlesin in the task:
 
 - **KISS (Keep It Simple, Stupid):**
     The staff_info function applies the KISS principle by keeping the logic straightforward. It only collects the required staff details and generates a requisition ID using a simple counter. No unnecessary complexity is added, which makes the function easy to understand and maintain.
