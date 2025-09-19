@@ -1,4 +1,3 @@
-
 # Assessment-3
 
 ## Introduction
@@ -19,13 +18,12 @@ This is the main task that brings everything together. It starts by calling the 
 
 ## Software Design Principles Used in the Code
 
-This are Software Design Principlesin in the task:
-
 - **KISS (Keep It Simple, Stupid):**
     The staff_info function applies the KISS principle by keeping the logic straightforward. It only collects the required staff details and generates a requisition ID using a simple counter. No unnecessary complexity is added, which makes the function easy to understand and maintain.
 - **Separation of Concerns:** The requisitions_total function demonstrates Separation of Concerns by handling only the collection of requisition items and the calculation of their total value. It does not manage staff details or approval logic, keeping these responsibilities separate. This makes the code modular and easier to extend in the future.
 - **Single Responsibility Principle (SRP):**
-    The requisition_approval function follows the SRP because its sole responsibility is to decide whether a requisition is “Approved” or remains “Pending.” It does not collect data or compute totals but instead focuses only on approval logic. This clear separation improves clarity and maintainability.
+    The requisition_approval function follows the SRP because its sole responsibility is to decide whether a requisition’s status should change from the default "Pending" to "Approved". It does not collect data or compute totals but instead focuses only on the approval logic. This clear separation improves clarity and maintainability.
+
 - **Open/Closed Principle:** The display_requisitions function reflects the Open/Closed Principle by being open for extension but closed for modification. It relies on other functions (staff_info, requisitions_total, and requisition_approval) to perform specific tasks. If new rules or features are needed, they can be added by updating those supporting functions without altering the display logic.
 
 ## Software Design Principles Not Used in the Code
@@ -36,8 +34,6 @@ This are Software Design Principlesin in the task:
 
 - **Y.A.G.N.I (You Aren’t Gonna Need It):** This principle is about avoiding adding unnecessary features before they are required. The tasks only asked for specific functionality (collect staff info, compute totals, approve requisitions, display results). No extra features were built, so there was no risk of “overengineering.” Hence, YAGNI was not explicitly relevant.
 
-- **Refactor, Refactor, Refactor:** The code is small, simple, and written directly for the exercise, so it hasn’t yet reached the scale where continuous refactoring is necessary. While refactoring is always good practice in larger, evolving projects, the given codebase is straightforward enough not to need major restructuring.
+- **Clean Code > Clever Code:** The functions already aim to be simple and easy to read. However, since the tasks were small and did not present opportunities for “clever” but confusing shortcuts, this principle didn’t explicitly come into play.
 
-- **Clean Code > Clever Code:** The functions already aim to be simple and easy to read (especially with the use of KISS). However, since the tasks were small and did not present opportunities for “clever” but confusing shortcuts, this principle didn’t explicitly come into play.
-
-- **Avoid Premature Optimisation:** The program deals with simple inputs and small datasets (staff info and requisition items). Performance bottlenecks are unlikely, so optimisation wasn’t necessary at this stage. The focus was correctness and clarity, not efficiency. Therefore, this principle was not applicable.
+- **Avoid Premature Optimisation:** The program deals with simple inputs and small data (staff info and requisition items). Performance issues are unlikely, so optimisation wasn’t necessary at this stage. The focus was correctness and clarity, not efficiency. Therefore, this principle was not applicable.
